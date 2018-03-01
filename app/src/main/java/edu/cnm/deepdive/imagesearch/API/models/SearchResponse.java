@@ -5,6 +5,10 @@ import java.util.List;
 
 public class SearchResponse {
 
+  public List<Item> getItems() {
+    return items;
+  }
+
   private class RequestData {
       private String title = null;
       private String totalResult = null;
@@ -12,8 +16,25 @@ public class SearchResponse {
       private int startIndex = 0;
   }
 
-  private class Item {
+  public class Item {
+    private String title = null;
     private String link = null;
+
+    public String getTitle() {
+      return title;
+    }
+
+    public void setTitle(String title) {
+      this.title = title;
+    }
+
+    public String getLink() {
+      return link;
+    }
+
+    public void setLink(String link) {
+      this.link = link;
+    }
   }
   private RequestData request = null;
   private RequestData nextpage = null;

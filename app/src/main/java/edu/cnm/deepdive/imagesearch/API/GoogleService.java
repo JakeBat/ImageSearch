@@ -13,6 +13,7 @@ public interface GoogleService {
       @Query("key") String key,
       @Query("cx") String cx,
       @Query("q") String query,
+      @Query("searchType") String searchType,
       @Query("num") int num,
       @Query("start") int start
   );
